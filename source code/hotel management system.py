@@ -70,45 +70,6 @@ def showOccupiedRooms():
     for row in res:
         print(row)
 
-"""def bookRoom():
-    print("-" * 40)
-    print("       BOOKING A ROOM ")
-    print("-" * 40)
-    print("vacant rooms")
-    k=showVacantRooms()
-    cname = input("Enter the Customer Name : ")
-    idtype = input("Enter the ID submitted(PAN Card/License/Aadhar Card/Passport) : ")
-    idno = input("Enter the ID number : ")
-    address = input("Enter Address : ")
-    phone = input("Enter Phone number : ")
-    gender = input("Enter Gender : ")
-    dcheckin = input("Enter Date of Check in (yyyy-mm-dd) : ")
-    room_no = int(input("Enter Room number : "))
-    q = "select * from room where status='Vacant'"
-    cr1 = con.cursor()
-    cr1.execute(q)
-    res = cr1.fetchall()
-    found=0
-    for i in res:
-            if i[0]==room_no:
-                    found=1
-            else:
-                    found = 0
-    if found==0:
-             print("Enter a valid room number")
-             room_no = int(input("Enter Room number : "))
-    if k!=[]:
-                    q = "insert into booking(cname,idno,idtype,address,phone,gender,dcheckin,room_no) values(%s,%s,%s,%s,%s,%s,%s,%s)"
-                    data = (cname,idno,idtype,address,phone,gender,dcheckin,room_no)
-                    cr = con.cursor()
-                    cr.execute(q,data)
-                    con.commit()
-                    q = "update room set status='Occupied' where rno ="+ str(room_no)
-                    cr.execute(q)
-                    con.commit()
-                    print("-" * 50)
-                    print("      ROOM BOOKED")
-                    print("-" * 50)"""
 def bookRoom():
     print("-" * 40)
     print("       BOOKING A ROOM ")
